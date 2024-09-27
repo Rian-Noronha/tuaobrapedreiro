@@ -38,16 +38,28 @@ android {
     }
 }
 
+val retrofit_version = "2.9.0"
+val gson_version = "2.9.0"
+val livedata_version = "2.8.6"
+val viewmodel_version = "2.8.6"
+val navigation_version = "2.8.1"
+val navigation_ui_version = "2.8.1"
+val appcompat_version = "1.7.0"
+val material_version = "1.12.0"
+val constraint_layout_version = "2.1.4"
+
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.5")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.8.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.0")
+    implementation("androidx.core:core-ktx:$retrofit_version")
+    implementation("androidx.appcompat:appcompat:$appcompat_version")
+    implementation("com.google.android.material:material:$material_version")
+    implementation("androidx.constraintlayout:constraintlayout:$constraint_layout_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_version")
+    implementation("androidx.navigation:navigation-fragment-ktx:$navigation_version")
+    implementation("androidx.navigation:navigation-ui-ktx:$navigation_ui_version")
+    implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation("com.squareup.retrofit2:converter-gson:$gson_version")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
