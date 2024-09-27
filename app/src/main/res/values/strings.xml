@@ -12,6 +12,8 @@
     <string name="hint_nome_lugar">Nome do Lugar</string>
     <string name="hint_numero">Número</string>
     <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_ver_detalhes">Ver detalhes</string>
+    <string name="titulo_demanda">Demanda em Destaque</string>
     <string name="btn_login">Bora</string>
     <string name="hint_contato">Contato (WhatsApp)</string>
     <string name="text_nao_tem_conta">Não tem uma conta? Cadastre-se aqui!</string>

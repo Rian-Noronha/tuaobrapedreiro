@@ -7,5 +7,5 @@ data class Demanda(
     val detalhes: String,
     val trabalhoSerFeito: String,
     val cepOndeSera: String,
-    val dataPublicacao: LocalDateTime
+    val dataPublicacao: String
 )
