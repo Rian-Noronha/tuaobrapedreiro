@@ -1,4 +1,4 @@
-package com.rn.tuaobraparapedreiro.ui.dashboard
+package com.rn.tuaobraparapedreiro.ui.contato
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.rn.tuaobraparapedreiro.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class ContatoFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
 
@@ -23,7 +23,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+            ViewModelProvider(this).get(ContatoViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root

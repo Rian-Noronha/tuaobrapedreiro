@@ -1,10 +1,10 @@
-package com.rn.tuaobraparapedreiro.ui.dashboard
+package com.rn.tuaobraparapedreiro.ui.contato
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ContatoViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
