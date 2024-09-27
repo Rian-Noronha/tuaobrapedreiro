@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.rn.tuaobraparapedreiro.databinding.FragmentDashboardBinding
+import com.rn.tuaobraparapedreiro.databinding.FragmentContatoBinding
 
 class ContatoFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentContatoBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +25,7 @@ class ContatoFragment : Fragment() {
         val dashboardViewModel =
             ViewModelProvider(this).get(ContatoViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentContatoBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard

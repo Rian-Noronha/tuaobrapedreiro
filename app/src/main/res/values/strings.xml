@@ -3,4 +3,16 @@
     <string name="title_demanda">Demanda</string>
     <string name="title_contato">Contato</string>
     <string name="title_mais">Mais</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_contato_whatsapp">Contato WhatsApp</string>
+    <string name="hint_descricao">Descrição</string>
+    <string name="hint_url_imagem_perfil">URL Imagem Perfil</string>
+    <string name="hint_cep">CEP</string>
+    <string name="hint_nome_lugar">Nome do Lugar</string>
+    <string name="hint_numero">Número</string>
+    <string name="btn_cadastrar">Cadastrar</string>
+    <string name="btn_login">Bora</string>
+    <string name="hint_contato">Contato (WhatsApp)</string>
+    <string name="text_nao_tem_conta">Não tem uma conta? Cadastre-se aqui!</string>
 </resources>

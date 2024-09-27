@@ -33,13 +33,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
+
 }
 
 val retrofit_version = "2.9.0"
 val gson_version = "2.9.0"
+val core_ktx_version = "1.13.1"
 val livedata_version = "2.8.6"
 val viewmodel_version = "2.8.6"
 val navigation_version = "2.8.1"
@@ -50,7 +54,7 @@ val constraint_layout_version = "2.1.4"
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:$retrofit_version")
+    implementation("androidx.core:core-ktx:$core_ktx_version")
     implementation("androidx.appcompat:appcompat:$appcompat_version")
     implementation("com.google.android.material:material:$material_version")
     implementation("androidx.constraintlayout:constraintlayout:$constraint_layout_version")
@@ -60,6 +64,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_ui_version")
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
     implementation("com.squareup.retrofit2:converter-gson:$gson_version")
+    implementation("androidx.activity:activity:1.9.2")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
