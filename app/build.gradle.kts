@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -52,7 +53,9 @@ val appcompat_version = "1.7.0"
 val material_version = "1.12.0"
 val constraint_layout_version = "2.1.4"
 
+
 dependencies {
+
 
     implementation("androidx.core:core-ktx:$core_ktx_version")
     implementation("androidx.appcompat:appcompat:$appcompat_version")
@@ -64,7 +67,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$navigation_ui_version")
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
     implementation("com.squareup.retrofit2:converter-gson:$gson_version")
-    implementation("androidx.activity:activity:1.9.2")
+    implementation("androidx.activity:activity-ktx:1.9.2")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.3")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")

@@ -71,27 +71,12 @@
             android:layout_margin="3dp"
             android:textSize="18sp"
             app:drawableStartCompat="@drawable/ic_locaiton_demanda_black_24dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnVerDetalhes"
             app:layout_constraintEnd_toEndOf="@id/txtHorarioPublicacao"
             app:layout_constraintStart_toStartOf="@id/txtHorarioPublicacao"
             app:layout_constraintTop_toBottomOf="@+id/txtHorarioPublicacao"
             app:layout_constraintVertical_bias="0.5"
             tools:text="A x km - Lugar - (Cidade)">
         </TextView>
-
-        <Button
-            android:id="@+id/btnVerDetalhes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btn_ver_detalhes"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/txtTituloDemanda"
-            app:layout_constraintStart_toStartOf="@id/txtTituloDemanda"
-            app:layout_constraintTop_toBottomOf="@+id/txtLocalizacao"
-            app:layout_constraintVertical_bias="0.5">
-        </Button>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

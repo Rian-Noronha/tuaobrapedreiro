@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.rn.tuaobraparapedreiro.adapter.DemandaAdapter
 import com.rn.tuaobraparapedreiro.databinding.FragmentHomeBinding
@@ -30,7 +31,6 @@ class HomeFragment : Fragment() {
 
         configurarRecyclerView()
 
-
         homeViewModel.demandas.observe(viewLifecycleOwner) { demandas ->
 
             demandasAdapter.updateDemandas(demandas)
@@ -48,11 +48,20 @@ class HomeFragment : Fragment() {
 
     private fun configurarRecyclerView() {
 
-        demandasAdapter = DemandaAdapter(emptyList())
+        demandasAdapter = DemandaAdapter(emptyList()) { id ->
+            abrirDemandaCliente(id)
+        }
 
         binding.recyclerViewDemanda.layoutManager = LinearLayoutManager(context)
 
         binding.recyclerViewDemanda.adapter = demandasAdapter
+    }
+
+    private fun abrirDemandaCliente(id: Long){
+
+        val action = HomeFragmentDirections.actionNavigationHomeToNavigationDemandaCliente(id)
+        findNavController().navigate(action)
+
     }
 
     override fun onDestroyView() {

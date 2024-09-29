@@ -17,4 +17,10 @@
     <string name="btn_login">Bora</string>
     <string name="hint_contato">Contato (WhatsApp)</string>
     <string name="text_nao_tem_conta">Não tem uma conta? Cadastre-se aqui!</string>
+    <string name="detatlhes_demanda">O que o cliente quer</string>
+    <string name="data_publicacao_demanda">Data da publicação</string>
+    <string name="trabalho_ser_feito">Trabalho a ser feito</string>
+    <string name="local_demanda">Lugar onde será</string>
+    <string name="contato_cliente">Contato do Cliente</string>
+    <string name="telefone_validado">Telefone validado pelo cliente</string>
 </resources>

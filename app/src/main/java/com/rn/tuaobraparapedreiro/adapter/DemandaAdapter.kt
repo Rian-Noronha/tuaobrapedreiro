@@ -8,9 +8,11 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.rn.tuaobraparapedreiro.databinding.ItemDemandaBinding
 import com.rn.tuaobraparapedreiro.model.Demanda
-import java.time.format.DateTimeFormatter
 
-class DemandaAdapter(private var demandas: List<Demanda>) : RecyclerView.Adapter<DemandaAdapter.DemandaViewHolder>() {
+class DemandaAdapter(
+    private var demandas: List<Demanda>,
+    private val onItemClick: (Long) -> Unit
+    ) : RecyclerView.Adapter<DemandaAdapter.DemandaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DemandaViewHolder {
         val binding = ItemDemandaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -21,6 +23,10 @@ class DemandaAdapter(private var demandas: List<Demanda>) : RecyclerView.Adapter
     override fun onBindViewHolder(holder: DemandaViewHolder, position: Int) {
         val demanda = demandas[position]
         holder.bind(demanda)
+
+        holder.itemView.setOnClickListener{
+            onItemClick(demanda.id!!)
+        }
     }
 
     override fun getItemCount() = demandas.size

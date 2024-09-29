@@ -9,17 +9,33 @@
         android:id="@+id/navigation_home"
         android:name="com.rn.tuaobraparapedreiro.ui.home.HomeFragment"
         android:label="@string/title_demanda"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_demanda_cliente"
+            app:destination="@id/navigation_demanda_cliente" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_contato"
         android:name="com.rn.tuaobraparapedreiro.ui.contato.ContatoFragment"
         android:label="@string/title_contato"
         tools:layout="@layout/fragment_contato" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_mais"
         android:name="com.rn.tuaobraparapedreiro.ui.mais.MaisFragment"
         android:label="@string/title_mais"
         tools:layout="@layout/fragment_mais" />
+    <fragment
+        android:id="@+id/navigation_demanda_cliente"
+        android:name="com.rn.tuaobraparapedreiro.ui.home.DemandaClienteFragment"
+        android:label="Detalhes da demanda"
+        tools:layout="@layout/fragment_demanda_cliente"
+        >
+        <argument
+            android:name="demandaId"
+            app:argType="long"
+            >
+        </argument>
+    </fragment>
 </navigation>
