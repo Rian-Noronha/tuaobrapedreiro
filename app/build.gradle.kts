@@ -52,7 +52,13 @@ val navigation_ui_version = "2.8.1"
 val appcompat_version = "1.7.0"
 val material_version = "1.12.0"
 val constraint_layout_version = "2.1.4"
-
+val auth_version = "22.1.2"
+val firestore_version = "24.8.1"
+val storage_version = "20.2.1"
+val crashlytics_version = "18.4.3"
+val crashlytics_gradle = "2.9.5"
+val bom_version = "32.8.1"
+val services_version = "4.3.15"
 
 dependencies {
 
@@ -70,6 +76,15 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.2")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.fragment:fragment-ktx:1.8.3")
+    implementation(platform("com.google.firebase:firebase-bom:$bom_version"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth-ktx:$auth_version")
+    implementation("com.google.gms:google-services:$services_version")
+    implementation("com.google.firebase:firebase-firestore-ktx:$firestore_version")
+    implementation("com.google.firebase:firebase-storage-ktx:$storage_version")
+    implementation("com.google.firebase:firebase-crashlytics-ktx:$crashlytics_version")
+    implementation("com.google.firebase:firebase-crashlytics-gradle:$crashlytics_gradle")
+    implementation("com.crashlytics.sdk.android:crashlytics:2.10.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
