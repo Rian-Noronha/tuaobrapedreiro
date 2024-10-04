@@ -97,32 +97,30 @@
             </TextView>
 
             <TextView
-                android:id="@+id/txtNomeCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:text="@string/nome_cliente"
                 app:drawableStartCompat="@drawable/ic_person_black_24dp"
-                tools:text="Nome"
                 >
             </TextView>
 
 
             <TextView
-                android:id="@+id/txtEmailCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:text="@string/email_cliente"
                 app:drawableStartCompat="@drawable/ic_mail_black_24dp"
-                tools:text="Email"
                 >
             </TextView>
 
 
             <TextView
-                android:id="@+id/txtContatoCliente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:text="@string/contato_cliente"
                 app:drawableStartCompat="@drawable/ic_contato_black_24dp"
                 tools:text="Contato"
                 >
@@ -138,9 +136,14 @@
                 >
             </TextView>
 
-
+            <Button
+                android:id="@+id/btnQueroContato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_falar_cliente"
+                >
+            </Button>
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

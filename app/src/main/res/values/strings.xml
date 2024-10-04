@@ -23,4 +23,8 @@
     <string name="local_demanda">Lugar onde será</string>
     <string name="contato_cliente">Contato do Cliente</string>
     <string name="telefone_validado">Telefone validado pelo cliente</string>
+    <string name="nome_cliente">Rixxx</string>
+    <string name="email_cliente">riaxxxxx@xxxxxx.xxx</string>
+    <string name="contato_clieinte">(87) xxxxx-xxxx</string>
+    <string name="btn_falar_cliente">Quero o contato</string>
 </resources>

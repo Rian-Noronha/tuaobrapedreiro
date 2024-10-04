@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.rn.tuaobraparapedreiro.databinding.FragmentDemandaClienteBinding
 
 class DemandaClienteFragment : Fragment() {
@@ -39,9 +41,14 @@ class DemandaClienteFragment : Fragment() {
                 binding.txtDataPublicacao.text = demandaCliente.dataPublicacao
                 binding.txtTrabalhoASerFeito.text = demandaCliente.trabalhoASerFeito
                 binding.txtLocalDemanda.text = demandaCliente.cep
-                binding.txtNomeCliente.text = demandaCliente.nomeCliente
-                binding.txtEmailCliente.text = demandaCliente.emailCliente
-                binding.txtContatoCliente.text = demandaCliente.contatoCliente
+
+                binding.btnQueroContato.setOnClickListener{
+                    showBottomDialog(
+                        demandaCliente.nomeCliente,
+                        demandaCliente.emailCliente,
+                        demandaCliente.contatoCliente
+                    )
+                }
             }
         }
 
@@ -52,6 +59,18 @@ class DemandaClienteFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    private fun showBottomDialog(nome: String, email: String, contato: String){
+        val bottomSheetDialog = BottomSheetDialog(requireContext())
+        val bottomSheetView = layoutInflater.inflate(com.rn.tuaobraparapedreiro.R.layout.bottom_sheet_contato_cliente, null)
+
+        bottomSheetView.findViewById<TextView>(com.rn.tuaobraparapedreiro.R.id.txtNomeCliente).text = nome
+        bottomSheetView.findViewById<TextView>(com.rn.tuaobraparapedreiro.R.id.txtEmailCliente).text = email
+        bottomSheetView.findViewById<TextView>(com.rn.tuaobraparapedreiro.R.id.txtContatoCliente).text = contato
+
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.show()
     }
 
     override fun onDestroyView() {
