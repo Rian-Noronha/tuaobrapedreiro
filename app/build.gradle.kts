@@ -56,7 +56,6 @@ val auth_version = "22.1.2"
 val firestore_version = "24.8.1"
 val storage_version = "20.2.1"
 val crashlytics_version = "18.4.3"
-val crashlytics_gradle = "2.9.5"
 val bom_version = "32.8.1"
 val services_version = "4.3.15"
 
@@ -83,7 +82,6 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx:$firestore_version")
     implementation("com.google.firebase:firebase-storage-ktx:$storage_version")
     implementation("com.google.firebase:firebase-crashlytics-ktx:$crashlytics_version")
-    implementation("com.google.firebase:firebase-crashlytics-gradle:$crashlytics_gradle")
     implementation("com.crashlytics.sdk.android:crashlytics:2.10.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")

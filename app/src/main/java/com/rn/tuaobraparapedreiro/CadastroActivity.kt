@@ -36,7 +36,6 @@ class CadastroActivity : AppCompatActivity() {
             email = binding.edtEmail.text.toString(),
             contatoWhatsApp = binding.edtContatoWhatsApp.text.toString(),
             descricao = binding.edtDescricao.text.toString(),
-            urlImagemPerfil = binding.edtUrlImagemPerfil.text.toString(),
             endereco = endereco,
         )
 

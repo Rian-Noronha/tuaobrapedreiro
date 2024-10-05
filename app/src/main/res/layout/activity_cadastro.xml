@@ -46,15 +46,6 @@
             />
 
         <EditText
-            android:id="@+id/edtUrlImagemPerfil"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_url_imagem_perfil"
-            android:minHeight="48dp"
-            android:inputType="text"
-            />
-
-        <EditText
             android:id="@+id/edtCep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

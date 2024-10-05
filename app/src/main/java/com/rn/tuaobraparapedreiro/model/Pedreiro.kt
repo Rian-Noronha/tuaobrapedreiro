@@ -2,7 +2,7 @@ package com.rn.tuaobraparapedreiro.model
 
 data class Pedreiro(
     val id: Long? = null,
-    val urlImagemPerfil: String?,
+    val urlImagemPerfil: String? = null,
     val descricao: String,
     val nome: String,
     val contatoWhatsApp: String,
