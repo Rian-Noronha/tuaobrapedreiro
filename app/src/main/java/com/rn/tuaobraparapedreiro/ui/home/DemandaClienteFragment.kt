@@ -41,6 +41,8 @@ class DemandaClienteFragment : Fragment() {
                 binding.txtDataPublicacao.text = demandaCliente.dataPublicacao
                 binding.txtTrabalhoASerFeito.text = demandaCliente.trabalhoASerFeito
                 binding.txtLocalDemanda.text = demandaCliente.cep
+                binding.txtNomeLugar.text = demandaCliente.nomeLugar
+                binding.txtNumeroLugar.text = demandaCliente.numero
 
                 binding.btnQueroContato.setOnClickListener{
                     showBottomDialog(

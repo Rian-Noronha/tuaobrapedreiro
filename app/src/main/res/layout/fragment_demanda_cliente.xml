@@ -81,6 +81,43 @@
         </TextView>
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_nome_lugar"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtNomeLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Ex.: Lagoa da Agulha">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_número"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtNumeroLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Ex.: 140">
+        </TextView>
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

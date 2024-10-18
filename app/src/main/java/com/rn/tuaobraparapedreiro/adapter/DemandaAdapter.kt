@@ -45,7 +45,7 @@ class DemandaAdapter(
         fun bind(demanda: Demanda) {
             binding.txtTrabalhoASerFeito.text = demanda.trabalhoSerFeito
             binding.txtHorarioPublicacao.text = demanda.dataPublicacao
-            binding.txtLocalizacao.text = demanda.cepOndeSera
+            binding.txtLocalizacao.text = demanda.endereco.cep
         }
     }
 }

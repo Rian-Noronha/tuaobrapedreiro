@@ -27,4 +27,6 @@
     <string name="email_cliente">riaxxxxx@xxxxxx.xxx</string>
     <string name="contato_clieinte">(87) xxxxx-xxxx</string>
     <string name="btn_falar_cliente">Quero o contato</string>
+    <string name="txt_nome_lugar">Nome do lugar</string>
+    <string name="txt_número">Número</string>
 </resources>

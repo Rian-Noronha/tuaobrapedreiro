@@ -5,8 +5,10 @@ data class DemandaCliente(
     val detalhes: String,
     val dataPublicacao: String,
     val trabalhoASerFeito: String,
-    val cep: String,
     val nomeCliente: String,
     val emailCliente: String,
-    val contatoCliente: String
+    val contatoCliente: String,
+    val cep: String,
+    val nomeLugar: String,
+    val numero: String
 )
