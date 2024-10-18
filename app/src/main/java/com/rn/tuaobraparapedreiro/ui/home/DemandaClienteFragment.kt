@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.auth.FirebaseAuth
 import com.rn.tuaobraparapedreiro.databinding.FragmentDemandaClienteBinding
 
 class DemandaClienteFragment : Fragment() {
