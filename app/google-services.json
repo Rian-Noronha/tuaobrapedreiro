@@ -12,7 +12,20 @@
           "package_name": "com.rn.tuaobraparapedreiro"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1047095734686-si7f902qp09q3kkk1ornkkrp2bh9laog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rn.tuaobraparapedreiro",
+            "certificate_hash": "07c166ebb317e4ca9d52abdd5c582a8102aacca3"
+          }
+        },
+        {
+          "client_id": "1047095734686-qv31si3dok9l889dis565n3ochpnjaqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDnb8vRTbBJpPIGVPjgQ6PtnAEAmSomNWE"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1047095734686-qv31si3dok9l889dis565n3ochpnjaqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
