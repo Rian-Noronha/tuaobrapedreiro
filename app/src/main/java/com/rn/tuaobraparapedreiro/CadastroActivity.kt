@@ -36,7 +36,7 @@ class CadastroActivity : AppCompatActivity() {
             email = binding.edtEmail.text.toString(),
             contatoWhatsApp = binding.edtContatoWhatsApp.text.toString(),
             descricao = binding.edtDescricao.text.toString(),
-            endereco = endereco,
+            endereco = endereco
         )
 
        RetrofitClient.instance.cadastrarPedreiro(pedreiro).enqueue(object : Callback<Void> {

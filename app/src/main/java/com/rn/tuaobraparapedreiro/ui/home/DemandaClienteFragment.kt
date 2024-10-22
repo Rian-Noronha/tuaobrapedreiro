@@ -17,12 +17,14 @@ class DemandaClienteFragment : Fragment() {
    private lateinit var demandaClienteViewModel: DemandaClienteViewModel
     private var _binding: FragmentDemandaClienteBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
     private val args: DemandaClienteFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         demandaClienteViewModel = ViewModelProvider(this).get(DemandaClienteViewModel::class.java)
+        auth = FirebaseAuth.getInstance()
     }
 
     override fun onCreateView(
@@ -46,11 +48,28 @@ class DemandaClienteFragment : Fragment() {
                 binding.txtNumeroLugar.text = demandaCliente.numero
 
                 binding.btnQueroContato.setOnClickListener{
-                    showBottomDialog(
-                        demandaCliente.nomeCliente,
-                        demandaCliente.emailCliente,
-                        demandaCliente.contatoCliente
-                    )
+
+                    val currentUser = auth.currentUser
+                    val pedreiroEmail = currentUser?.email
+
+                    if(pedreiroEmail != null){
+                        demandaClienteViewModel.fetchDemandaPedreiro(pedreiroEmail, demandaId)
+
+                        showBottomDialog(
+                            demandaCliente.nomeCliente,
+                            demandaCliente.emailCliente,
+                            demandaCliente.contatoCliente
+                        )
+                    }else{
+
+                        Toast.makeText(
+                            context,
+                            "Erro: Não foi possível obter o email do pedreiro.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+
                 }
             }
         }

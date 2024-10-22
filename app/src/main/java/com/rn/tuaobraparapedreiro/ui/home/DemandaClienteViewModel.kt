@@ -37,4 +37,28 @@ class DemandaClienteViewModel : ViewModel() {
 
         })
     }
+
+
+    public fun fetchDemandaPedreiro(email: String, demandaId: Long) {
+        RetrofitClient.instance.vincularDemandaPedreiro(email, demandaId).enqueue(object : Callback<Void> {
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                if (response.isSuccessful) {
+                    Log.i("VincularDemanda", "Demanda vinculada com sucesso ao pedreiro.")
+                    _error.value = null
+                } else {
+                    _error.value = "Erro ao vincular demanda: ${response.message()}"
+                    Log.e("VincularDemanda", "Erro: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                _error.value = "Falha ao conectar: ${t.message}"
+                Log.e("VincularDemanda", "Falha: ${t.message}")
+            }
+        })
+    }
+
+
+
+
 }

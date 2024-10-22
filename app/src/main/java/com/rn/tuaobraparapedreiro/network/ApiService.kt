@@ -13,6 +13,9 @@ interface ApiService {
     @POST("/api/pedreiro")
     fun cadastrarPedreiro(@Body pedreiro: Pedreiro): Call<Void>
 
+    @POST("/api/pedreiro/email/{email}/demanda/{demandaId}")
+    fun vincularDemandaPedreiro(@Path("email") email: String, @Path("demandaId") demandaId: Long): Call<Void>
+
     @GET("/api/demandas")
     fun getDemandas(): Call<List<Demanda>>
 
