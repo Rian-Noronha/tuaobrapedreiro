@@ -46,7 +46,7 @@ class DemandaClienteViewModel : ViewModel() {
                     Log.i("VincularDemanda", "Demanda vinculada com sucesso ao pedreiro.")
                     _error.value = null
                 } else {
-                    _error.value = "Erro ao vincular demanda: ${response.message()}"
+                    _error.value = "Você já tem este contato, viu:)"
                     Log.e("VincularDemanda", "Erro: ${response.message()}")
                 }
             }

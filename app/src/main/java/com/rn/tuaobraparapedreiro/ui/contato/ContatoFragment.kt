@@ -4,36 +4,59 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.rn.tuaobraparapedreiro.adapter.ClienteAdapter
 import com.rn.tuaobraparapedreiro.databinding.FragmentContatoBinding
 
 class ContatoFragment : Fragment() {
-
+    private lateinit var auth: FirebaseAuth
     private var _binding: FragmentContatoBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+    private lateinit var contatoViewModel: ContatoViewModel
+    private lateinit var clientesAdapter: ClienteAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(ContatoViewModel::class.java)
-
         _binding = FragmentContatoBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+         contatoViewModel = ViewModelProvider(this).get(ContatoViewModel::class.java)
+         auth = FirebaseAuth.getInstance()
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        configurarRecyclerView()
+
+        val currentUser = auth.currentUser
+        val pedreiroEmail = currentUser?.email
+
+
+        contatoViewModel.fetchClientesVinculadoPedreiroDemanda(pedreiroEmail.toString())
+
+        contatoViewModel.clientes.observe(viewLifecycleOwner) { clientes ->
+            clientesAdapter.updateDemandas(clientes)
         }
-        return root
+
+        contatoViewModel.error.observe(viewLifecycleOwner) { error ->
+            error?.let{
+                Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        return binding.root
     }
+
+
+    private fun configurarRecyclerView(){
+        clientesAdapter = ClienteAdapter(emptyList())
+
+        binding.recyclerViewContato.layoutManager = LinearLayoutManager(context)
+        binding.recyclerViewContato.adapter = clientesAdapter
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

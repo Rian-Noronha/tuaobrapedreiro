@@ -1,5 +1,6 @@
 package com.rn.tuaobraparapedreiro.network
 
+import com.rn.tuaobraparapedreiro.model.Cliente
 import com.rn.tuaobraparapedreiro.model.Demanda
 import com.rn.tuaobraparapedreiro.model.DemandaCliente
 import com.rn.tuaobraparapedreiro.model.Pedreiro
@@ -22,4 +23,6 @@ interface ApiService {
     @GET("/api/demandacliente/{id}")
     fun getDemandaCliente(@Path("id") id: Long): Call<DemandaCliente>
 
+    @GET("/api/clientesvinculadospedreirodemanda/email/{email}")
+    fun listarClientesVinculadoPedreiroDemanda(@Path("email") email: String): Call<List<Cliente>>
 }
