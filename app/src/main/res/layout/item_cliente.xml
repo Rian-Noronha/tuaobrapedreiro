@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp">
-
+    android:padding="20dp"
+    android:background="@color/colorWhite">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -21,90 +21,85 @@
             android:id="@+id/txtContatoCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             tools:text="Contato cliente"
-            android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textColor="@color/colorConcrete"
+            android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txtNomeCliente"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5"
-            app:layout_constraintVertical_chainStyle="packed">
-        </TextView>
+            app:layout_constraintVertical_chainStyle="packed"/>
 
         <TextView
             android:id="@+id/txtNomeCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/colorConcrete"
+            android:textSize="22sp"
             app:layout_constraintBottom_toTopOf="@+id/txtEmailCliente"
             app:layout_constraintEnd_toEndOf="@id/txtContatoCliente"
             app:layout_constraintStart_toStartOf="@id/txtContatoCliente"
             app:layout_constraintTop_toBottomOf="@+id/txtContatoCliente"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="Nome cliente">
-        </TextView>
+            tools:text="Nome cliente"/>
 
         <TextView
             android:id="@+id/txtEmailCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorConcrete"
             app:layout_constraintBottom_toTopOf="@+id/txtCepCliente"
             app:layout_constraintEnd_toEndOf="@id/txtNomeCliente"
             app:layout_constraintStart_toStartOf="@id/txtNomeCliente"
             app:layout_constraintTop_toBottomOf="@+id/txtNomeCliente"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="E-mail cliente">
-        </TextView>
+            tools:text="E-mail cliente"/>
 
         <TextView
             android:id="@+id/txtCepCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorConcrete"
             app:layout_constraintEnd_toEndOf="@id/txtEmailCliente"
             app:layout_constraintStart_toStartOf="@id/txtEmailCliente"
             app:layout_constraintTop_toBottomOf="@+id/txtEmailCliente"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="CEP cliente">
-        </TextView>
-
+            tools:text="CEP cliente"/>
 
         <TextView
             android:id="@+id/txtNomeLugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorConcrete"
             app:layout_constraintEnd_toEndOf="@id/txtCepCliente"
             app:layout_constraintStart_toStartOf="@id/txtCepCliente"
             app:layout_constraintTop_toBottomOf="@+id/txtCepCliente"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="Nome lugar">
-        </TextView>
-
+            tools:text="Nome lugar"/>
 
         <TextView
             android:id="@+id/txtNumeroLugar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:textSize="18sp"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorConcrete"
             app:layout_constraintEnd_toEndOf="@id/txtNomeLugar"
             app:layout_constraintStart_toStartOf="@id/txtNomeLugar"
             app:layout_constraintTop_toBottomOf="@+id/txtNomeLugar"
             app:layout_constraintVertical_bias="0.5"
-            tools:text="Número">
-        </TextView>
+            tools:text="Número"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

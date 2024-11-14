@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/detatlhes_demanda"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold"></TextView>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:text="@string/data_publicacao_demanda"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold"></TextView>
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:text="@string/trabalho_ser_feito"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold"></TextView>
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:text="@string/local_demanda"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold">
         </TextView>
 
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_nome_lugar"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold">
         </TextView>
 
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txt_número"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/colorBlack"
             android:textStyle="bold">
         </TextView>
 
