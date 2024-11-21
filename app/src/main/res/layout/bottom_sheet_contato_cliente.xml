@@ -5,61 +5,114 @@
     android:id="@+id/bottom_sheet_contato_cliente"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_vertical"
+    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/contato_cliente"
-        android:textSize="24sp"
-        android:textStyle="bold">
-    </TextView>
+        android:textSize="20sp"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
-    <TextView
-        android:id="@+id/txtNomeCliente"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        tools:text="Nome"
-        app:drawableStartCompat="@drawable/ic_person_black_24dp"
-        >
-    </TextView>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_person_black_24dp"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/colorConcrete" />
+
+        <TextView
+            android:id="@+id/txtNomeCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            tools:text="Nome do Cliente" />
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txtEmailCliente"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        tools:text="xxxx@xxxxx.xxx"
-        app:drawableStartCompat="@drawable/ic_mail_black_24dp"
-        >
-    </TextView>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_mail_black_24dp"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/colorBrick" />
+
+        <TextView
+            android:id="@+id/txtEmailCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            tools:text="email@exemplo.com" />
+    </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/txtContatoCliente"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/contato_cliente"
-        app:drawableStartCompat="@drawable/ic_contato_black_24dp"
-        tools:text="Contato"
-        >
-    </TextView>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_contato_black_24dp"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/colorYellowHardHat" />
+
+        <TextView
+            android:id="@+id/txtContatoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            tools:text="(XX) XXXXX-XXXX" />
+    </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/telefone_validado"
-        android:textSize="18sp"
-        app:drawableStartCompat="@drawable/ic_verified_black_24dp"
-        >
-    </TextView>
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
 
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_verified_black_24dp"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/colorOrangeSafety" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/telefone_validado"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
 </LinearLayout>

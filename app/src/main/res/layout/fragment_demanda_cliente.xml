@@ -7,131 +7,132 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.DemandaClienteFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/detatlhes_demanda"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"></TextView>
-
-        <TextView
-            android:id="@+id/txtDetalhes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Detalhes"></TextView>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/data_publicacao_demanda"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"></TextView>
-
-        <TextView
-            android:id="@+id/txtDataPublicacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Publicado em xx/yy/zz"></TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/trabalho_ser_feito"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold"></TextView>
-
-        <TextView
-            android:id="@+id/txtTrabalhoASerFeito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="É pra fazer(...)"></TextView>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/local_demanda"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold">
-        </TextView>
-
-        <TextView
-            android:id="@+id/txtLocalDemanda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="A x km de onde você mora">
-        </TextView>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_nome_lugar"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold">
-        </TextView>
-
-        <TextView
-            android:id="@+id/txtNomeLugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Ex.: Lagoa da Agulha">
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/txt_número"
-            android:textSize="24sp"
-            android:textColor="@color/colorBlack"
-            android:textStyle="bold">
-        </TextView>
-
-        <TextView
-            android:id="@+id/txtNumeroLugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            tools:text="Ex.: 140">
-        </TextView>
-
+        android:padding="16dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:dividerPadding="8dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detatlhes_demanda"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtDetalhes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Detalhes"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_publicacao_demanda"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtDataPublicacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Publicado em xx/yy/zz"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trabalho_ser_feito"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtTrabalhoASerFeito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="É pra fazer(...)"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/local_demanda"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtLocalDemanda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="A x km de onde você mora"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_nome_lugar"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtNomeLugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Ex.: Lagoa da Agulha"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_número"
+                android:textSize="24sp"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txtNumeroLugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Ex.: 140"
+                android:layout_marginBottom="16dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contato_cliente"
                 android:textSize="24sp"
-                android:textStyle="bold">
-            </TextView>
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -139,9 +140,7 @@
                 android:textSize="18sp"
                 android:text="@string/nome_cliente"
                 app:drawableStartCompat="@drawable/ic_person_black_24dp"
-                >
-            </TextView>
-
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -149,9 +148,7 @@
                 android:textSize="18sp"
                 android:text="@string/email_cliente"
                 app:drawableStartCompat="@drawable/ic_mail_black_24dp"
-                >
-            </TextView>
-
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -160,9 +157,7 @@
                 android:text="@string/contato_cliente"
                 app:drawableStartCompat="@drawable/ic_contato_black_24dp"
                 tools:text="Contato"
-                >
-            </TextView>
-
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -170,18 +165,14 @@
                 android:text="@string/telefone_validado"
                 android:textSize="18sp"
                 app:drawableStartCompat="@drawable/ic_verified_black_24dp"
-                >
-            </TextView>
+                android:layout_marginBottom="16dp" />
 
             <Button
                 android:id="@+id/btnQueroContato"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_falar_cliente"
-                >
-            </Button>
+                android:layout_marginTop="16dp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
+    </ScrollView>
 </FrameLayout>
