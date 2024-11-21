@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "1047095734686",
     "project_id": "tuaobra-para-pedreiro",
-    "storage_bucket": "tuaobra-para-pedreiro.appspot.com"
+    "storage_bucket": "tuaobra-para-pedreiro.firebasestorage.app"
   },
   "client": [
     {
@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1047095734686-si7f902qp09q3kkk1ornkkrp2bh9laog.apps.googleusercontent.com",
+          "client_id": "1047095734686-5itv51ppu31po1tr299srn0l92m2prnb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.rn.tuaobraparapedreiro",
-            "certificate_hash": "07c166ebb317e4ca9d52abdd5c582a8102aacca3"
+            "certificate_hash": "50595cadb29c1b31a95f5ff1473baa76ce946708"
           }
         },
         {
