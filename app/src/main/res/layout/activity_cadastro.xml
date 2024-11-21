@@ -10,6 +10,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -17,6 +18,8 @@
                 android:id="@+id/edtNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_person_black_24dp"
                 android:hint="@string/hint_nome"
                 android:inputType="text"
                 android:minHeight="48dp" />
@@ -25,6 +28,8 @@
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_mail_black_24dp"
                 android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp" />
@@ -33,6 +38,8 @@
                 android:id="@+id/edtContatoWhatsApp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_contact_24dp"
                 android:hint="@string/hint_contato_whatsapp"
                 android:inputType="number"
                 android:minHeight="48dp" />
@@ -41,6 +48,8 @@
                 android:id="@+id/edtDescricao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_description_24dp"
                 android:hint="@string/hint_descricao"
                 android:inputType="text"
                 android:minHeight="48dp" />
@@ -49,6 +58,8 @@
                 android:id="@+id/edtCep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_locaiton_demanda_black_24dp"
                 android:hint="@string/hint_cep"
                 android:inputType="number"
                 android:minHeight="48dp" />
@@ -57,6 +68,8 @@
                 android:id="@+id/edtNomeLugar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_place_name_24dp"
                 android:hint="@string/hint_nome_lugar"
                 android:inputType="text"
                 android:minHeight="48dp" />
@@ -65,6 +78,8 @@
                 android:id="@+id/edtNumero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_number_24dp"
                 android:hint="@string/hint_numero"
                 android:inputType="text"
                 android:minHeight="48dp" />

@@ -1,105 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
     android:background="@color/colorWhite">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:background="@drawable/background_demanda"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/txtContatoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_contact_24dp"
+        tools:text="Contato"
+        android:textColor="@color/colorBrick"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center" />
 
-        <TextView
-            android:id="@+id/txtContatoCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            tools:text="Contato cliente"
-            android:textColor="@color/colorConcrete"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/txtNomeCliente"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            app:layout_constraintVertical_chainStyle="packed"/>
+    <TextView
+        android:id="@+id/txtNomeCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_person_black_24dp"
+        tools:text="Nome"
+        android:textColor="@color/colorConcrete"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/txtContatoCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtNomeCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:textColor="@color/colorConcrete"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toTopOf="@+id/txtEmailCliente"
-            app:layout_constraintEnd_toEndOf="@id/txtContatoCliente"
-            app:layout_constraintStart_toStartOf="@id/txtContatoCliente"
-            app:layout_constraintTop_toBottomOf="@+id/txtContatoCliente"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="Nome cliente"/>
+    <TextView
+        android:id="@+id/txtEmailCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_mail_black_24dp"
+        tools:text="E-mail"
+        android:textColor="@color/colorConcrete"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtEmailCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorConcrete"
-            app:layout_constraintBottom_toTopOf="@+id/txtCepCliente"
-            app:layout_constraintEnd_toEndOf="@id/txtNomeCliente"
-            app:layout_constraintStart_toStartOf="@id/txtNomeCliente"
-            app:layout_constraintTop_toBottomOf="@+id/txtNomeCliente"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="E-mail cliente"/>
+    <TextView
+        android:id="@+id/txtCepCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_locaiton_demanda_black_24dp"
+        tools:text="CEP"
+        android:textColor="@color/colorConcrete"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txtEmailCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtCepCliente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorConcrete"
-            app:layout_constraintEnd_toEndOf="@id/txtEmailCliente"
-            app:layout_constraintStart_toStartOf="@id/txtEmailCliente"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmailCliente"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="CEP cliente"/>
+    <TextView
+        android:id="@+id/txtNomeLugar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_place_name_24dp"
+        tools:text="Lugar"
+        android:textColor="@color/colorConcrete"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txtCepCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtNomeLugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorConcrete"
-            app:layout_constraintEnd_toEndOf="@id/txtCepCliente"
-            app:layout_constraintStart_toStartOf="@id/txtCepCliente"
-            app:layout_constraintTop_toBottomOf="@+id/txtCepCliente"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="Nome lugar"/>
+    <TextView
+        android:id="@+id/txtNumeroLugar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawablePadding="8dp"
+        app:drawableStartCompat="@drawable/ic_number_24dp"
+        tools:text="Número"
+        android:textColor="@color/colorConcrete"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txtNomeLugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/txtNumeroLugar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:textSize="20sp"
-            android:textColor="@color/colorConcrete"
-            app:layout_constraintEnd_toEndOf="@id/txtNomeLugar"
-            app:layout_constraintStart_toStartOf="@id/txtNomeLugar"
-            app:layout_constraintTop_toBottomOf="@+id/txtNomeLugar"
-            app:layout_constraintVertical_bias="0.5"
-            tools:text="Número"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@id/txtNumeroLugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
