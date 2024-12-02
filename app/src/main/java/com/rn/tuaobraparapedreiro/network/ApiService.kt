@@ -7,10 +7,15 @@ import com.rn.tuaobraparapedreiro.model.Pedreiro
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
+
+    @POST("/api/auth/pedreiro")
+    fun autenticar(@Header("Authorization") authorization: String): Call<Pedreiro>
+
     @POST("/api/pedreiro")
     fun cadastrarPedreiro(@Body pedreiro: Pedreiro): Call<Void>
 
