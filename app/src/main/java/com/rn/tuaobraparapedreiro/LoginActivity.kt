@@ -42,24 +42,7 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(binding.editTextEmail.text.toString(), binding.editTextPassword.text.toString())
                     .addOnCompleteListener(this){ task ->
                         if (task.isSuccessful) {
-
-                            val user = auth.currentUser
-                            user?.getIdToken(true)?.addOnCompleteListener { tokenTask ->
-                                if (tokenTask.isSuccessful) {
-
-                                    val idToken = tokenTask.result?.token
-
-
-                                    idToken?.let {
-                                        enviarTokenParaServidor(it)
-                                    }
-
-
-                                    startActivity(Intent(this, MainActivity::class.java))
-                                } else {
-                                    Log.e("Firebase", "Falha ao obter o ID Token")
-                                }
-                            }
+                            startActivity(Intent(this, MainActivity::class.java))
                         } else {
                             Log.w("EmailPassowrdFailure", "signInWithEmail:failure", task.exception)
                             Toast.makeText(
@@ -118,10 +101,6 @@ class LoginActivity : AppCompatActivity() {
         fbAuth.signInWithCredential(credential)
             .addOnCompleteListener(this){ task ->
                 if(task.isSuccessful){
-                    val idToken = acct.idToken
-
-                    idToken?.let{enviarTokenParaServidor(it)}
-
                     finish()
                     startActivity(Intent(this, MainActivity::class.java))
                 }else{
@@ -132,50 +111,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showErrorSignIn() {
         Toast.makeText(this, R.string.error_google_sign_in, Toast.LENGTH_SHORT).show()
-    }
-
-
-    private fun enviarTokenParaServidor(idToken: String) {
-        val apiService = RetrofitClient.instance
-
-
-        val call = apiService.autenticar("Bearer $idToken")
-
-        call.enqueue(object : Callback<Pedreiro> {
-            override fun onResponse(call: Call<Pedreiro>, response: Response<Pedreiro>) {
-                if (response.isSuccessful) {
-                    Log.d("Firebase", "Login realizado com sucesso: ${response.body()}")
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                    finish()
-                } else {
-
-                    Log.e("Firebase", "Falha no login: ${idToken}")
-                    renovarToken()
-                }
-            }
-
-            override fun onFailure(call: Call<Pedreiro>, t: Throwable) {
-                Log.e("Firebase", "Erro ao autenticar no servidor", t)
-                Toast.makeText(this@LoginActivity, "Erro ao conectar ao servidor.", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }
-
-    private fun renovarToken() {
-        val user = FirebaseAuth.getInstance().currentUser
-        user?.getIdToken(true)?.addOnCompleteListener { tokenTask ->
-            if (tokenTask.isSuccessful) {
-
-                val newIdToken = tokenTask.result?.token
-
-
-                newIdToken?.let {
-                    enviarTokenParaServidor(it)
-                }
-            } else {
-                Log.e("Firebase", "Falha ao renovar o ID Token")
-            }
-        }
     }
 
     private fun validarCampos(): Boolean {

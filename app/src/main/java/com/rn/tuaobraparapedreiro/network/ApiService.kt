@@ -12,10 +12,6 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
-
-    @POST("/api/auth/pedreiro")
-    fun autenticar(@Header("Authorization") authorization: String): Call<Pedreiro>
-
     @POST("/api/pedreiro")
     fun cadastrarPedreiro(@Body pedreiro: Pedreiro): Call<Void>
 

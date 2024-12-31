@@ -9,7 +9,5 @@ data class Pedreiro(
     val email: String,
     val endereco: Endereco,
     val especialidade: List<Especialidade>? = null,
-    val demandas: List<Demanda>? = null,
-    val firebaseUid: String? = null
-
+    val demandas: List<Demanda>? = null
 )

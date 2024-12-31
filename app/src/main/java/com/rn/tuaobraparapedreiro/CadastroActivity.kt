@@ -31,7 +31,7 @@ class CadastroActivity : AppCompatActivity() {
 
 
     private fun cadastrarPedreiro() {
-        if (validarCamposPreenchidos()) {
+        if (validarCampos()) {
             auth.createUserWithEmailAndPassword(
                 binding.edtEmail.text.toString(),
                 binding.edtSenha.text.toString()
@@ -45,16 +45,14 @@ class CadastroActivity : AppCompatActivity() {
                         )
 
                         val currentUser = FirebaseAuth.getInstance().currentUser
-                        val firebaseUid = currentUser?.uid
-                            ?: throw IllegalStateException("Usuário não autenticado")
+
 
                         val pedreiro = Pedreiro(
                             nome = binding.edtNome.text.toString(),
                             email = binding.edtEmail.text.toString(),
                             contatoWhatsApp = binding.edtWhastApp.text.toString(),
                             descricao = binding.edtDescricao.text.toString(),
-                            endereco = endereco,
-                            firebaseUid = firebaseUid
+                            endereco = endereco
                         )
 
                         RetrofitClient.instance.cadastrarPedreiro(pedreiro)
@@ -69,10 +67,6 @@ class CadastroActivity : AppCompatActivity() {
                                             binding.edtSenha.text.toString()
                                         ).addOnCompleteListener { signInTask ->
                                             if (signInTask.isSuccessful) {
-                                                Log.d(
-                                                    "FirebaseUID",
-                                                    "UID do Firebase: $firebaseUid"
-                                                )
                                                 Toast.makeText(
                                                     this@CadastroActivity,
                                                     "Cadastro e login realizados com sucesso!",
